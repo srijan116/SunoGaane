@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SunoGaane - Listen to hit songs</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}" type="image/png">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel= "stylesheet" type="text/css" href= "{{ url_for('static',filename='css/utils.css') }}">
+</head>
+<body>
+    <div class="container flex bg-black">
+        <div class="left">
+            <div class="home bg-grey curve m1">
+                <div class="logo">
+                    <a href="/"><img width="130" class="pointer" src="{{ url_for('static', filename='images/logo.jpg')}}" alt="logo"></a>
+                    <img class="pointer close" src="{{ url_for('static', filename='images/close.svg')}}" alt="close">
+                    
+                </div>
+                
+                <ul class="pointer">
+                    <a href="/"><li class="bold"><img src="{{ url_for('static', filename='images/home.svg')}}" alt="home"> Home</li></a>
+                    <!-- <li><img src="{{ url_for('static', filename='images/search.svg')}}" alt="search">Search</li> -->
+                </ul>
+            </div>
+            <div class="library bg-grey curve m1">
+                <div class="library-heading"><img src="{{ url_for('static', filename='images/library.svg')}}" alt="library"> Your Library</div>
+                <div class="playlist">
+                    <div id="allSongs">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="right ">
+
+            <header class="curve">
+                <div class="nav">
+                    <img class="pointer hamburger" src="{{ url_for('static', filename='images/hamburger.svg')}}" alt="logo">
+                    <button><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="15" height="15"><path fill="white" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/></svg></button>
+                    <button><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"  width="15" height="15"><path fill="white" d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg></button>
+                </div>
+                <div class="sign-in-up">
+                    <button class="signup">Sign up</button>
+                    <button class="login">Log in</button>
+                </div>
+                
+            </header>
+
+            <div class="playlist bg-grey curve">
+                <h2>Playlists</h2>
+                
+                <div class="cardContainer">
+                    
+                </div>
+            </div>
+
+            <div class="playbar">
+                <!-- <audio id="music-file" src="" controls></audio> -->
+                <div class="songDetails">
+                    <div id="songName" class="songFont"></div>
+                    <div class="playbtns">
+                        <button><img id="previousSong" src="{{ url_for('static', filename='images/previous.svg')}}" alt="previous"></button>
+                        <button id="play-pause-btn"><img id="play-pause" src="{{ url_for('static', filename='images/play.svg')}}" alt="play"></button>
+                        <button><img id="nextSong" src="{{ url_for('static', filename='images/next.svg')}}" alt="next"></button>
+                    </div>
+                    
+                    <div class="volumeTime">
+                        <div id="volumeBar"><input type="range" min="0" max="100"></div>
+                        <div id="duration" class="songFont"></div>
+                        <button id="volbtn"><img src="{{ url_for('static', filename='images/volume.svg')}}" alt="volume"></button>
+                        <!-- <input type="range" min="0" max="100"> -->
+                    </div>
+                </div>
+                
+                <div class="seekbar">
+                    <div class="progressCircle"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

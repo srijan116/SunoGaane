@@ -1,0 +1,66 @@
+.border{
+    border: 2px solid red;
+    margin: 2px;
+}
+
+.flex{
+    display: flex;
+}
+
+.justify{
+    justify-content: center;
+}
+
+.item-center{
+    align-items: center;
+}
+
+.curve{
+    border-radius: 10px;
+}
+
+.m1{
+    margin: 0.5rem;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.bold{
+    font-weight: 700;
+}
+
+.thin{
+    font-weight: 200;
+}
+
+
+
+/* audio{
+    width: 100%;
+}
+
+audio::-webkit-media-controls-panel {
+background-color: #4c4c4c;
+}
+
+audio::-webkit-media-controls-play-button{
+    color: white;
+} */
+
+.not-allowed{
+    cursor: no-drop;
+}
+
+.active{
+    background-color: rgb(71, 71, 240);
+}
+
+.pointerNone{
+    pointer-events: none;
+}
+
+.cursorNone{
+    cursor: not-allowed;
+}
