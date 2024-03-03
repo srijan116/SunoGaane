@@ -14,7 +14,7 @@ def getSongs():
         print("****STARTED****")
         folder = request.get_json()
         print(folder)
-        path = f'{os.getcwd()}\\static\\songs\\{folder}'
+        path = f'{os.getcwd()}/static/songs/{folder}'
         print(path)
         songs = os.listdir(path)
         print(songs)
@@ -22,17 +22,16 @@ def getSongs():
 
 @app.route("/get-cards", methods=['GET','POST'])
 def getCards():
-    path = f'{os.getcwd()}\\static\\songs'
-    print(path)
+    path = f'{os.getcwd()}/static/songs'
     playlists = os.listdir(path)
     return jsonify(playlists)
 
 @app.route('/play/<path:filename>')
 def play_song(filename):
-    file = f'{os.getcwd()}\\static\\songs\\{filename}.mp3'
+    file = f'{os.getcwd()}/static/songs/{filename}.mp3'
     print("########SONG###### ", file)
     return send_file(file, mimetype='audio/mpeg')
     
 
-# if __name__ == "__main__":
-#     app.run(debug=False, host="0.0.0.0")
+if __name__ == "__main__":
+    app.run(debug=False, host="0.0.0.0")
