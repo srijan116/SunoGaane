@@ -14,7 +14,8 @@ def getSongs():
         print("****STARTED****")
         folder = request.get_json()
         print(folder)
-        path = f'{os.getcwd()}\\static\\songs\\{folder}'
+        # path = f'{os.getcwd()}\\static\\songs\\{folder}'
+        path = "\static\songs"
         print(path)
         songs = os.listdir(path)
         print(songs)
