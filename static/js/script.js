@@ -38,7 +38,7 @@ async function getSongs(id){
 async function loadCards(){
     // currentSong.pause();
     let cardContainer = document.querySelector(".cardContainer");
-    let cardList = await fetch("https://sunogaane.onrender.com/get-cards");
+    let cardList = await fetch("/get-cards");
     let cards = await cardList.json();
     document.getElementById("allSongs").innerHTML = "";
     
