@@ -22,8 +22,8 @@ def getSongs():
 
 @app.route("/get-cards", methods=['GET','POST'])
 def getCards():
-    # path = f'{os.getcwd()}\\static\\songs'
-    path = "\static\songs"
+    path = f'{os.getcwd()}\\static\\songs'
+    print(path)
     playlists = os.listdir(path)
     return jsonify(playlists)
 
